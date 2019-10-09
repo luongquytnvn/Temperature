@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function (nhietdo) {
+        this.nhietdo = nhietdo;
+        this.changeCtoF = function (nhietdo) {
+            return nhietdo*1.8+32;
+        };
+        this.changeCtoK = function (nhietdo) {
+            return nhietdo+273;
+        };
+    };
+    let temperature = new Temperature(25);
+    let nhietdo = temperature.nhietdo;
+    let changeCtoF = temperature.changeCtoF(nhietdo);
+    let changeCtoK = temperature.changeCtoK(nhietdo);
+    document.write(nhietdo+' C = '+changeCtoF+' F = '+changeCtoK+' K')
+</script>
+</body>
+</html>
